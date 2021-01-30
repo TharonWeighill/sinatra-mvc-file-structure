@@ -1,4 +1,11 @@
-class ApplicationController < Sinatra::Base
+class ApplicationController < Sinatra::Base 
+  attr_accessor :name, :breed, :age
+
+  def Dog.initialize(name, breed, age)
+    @name = name
+    @breed = breed
+    @age = age
+  end
 
   configure do
   	set :views, "app/views"
